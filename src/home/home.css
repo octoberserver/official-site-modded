@@ -1,0 +1,6 @@
+.banner-image {
+    background-image: url("minecraft1.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
