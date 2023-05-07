@@ -18,10 +18,6 @@ nav {
 nav a {
     font-weight: 400;
     text-decoration: none;
-    user-select: none;
-}
-nav img {
-    -webkit-user-drag: none;
 }
 .logo-title {
     font-size: 1.8rem;
@@ -40,4 +36,29 @@ nav .pages-li {
     color: white;
     padding: 0.3rem 0.7rem;
     font-size: 1.4rem;
+}
+.no-drag_c {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.bg-242424_c {
+    background-color: #242424;
+}
+.bg-393939_c {
+    background-color: #393939;
+}
+.bg-2D2D2D_c {
+    background-color: #2D2D2D;
+}
+.bg-DF0000_c {
+    background-color: #DF0000
+}
+.fg-DF0000_c {
+    color: #DF0000
+}
+.svg-white_c {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(355deg) brightness(104%) contrast(103%);
 }

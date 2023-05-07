@@ -14,11 +14,11 @@
 </head>
 <body>
     <nav class="box-border w-full flex justify-between items-center py-1.5 px-5 fixed backdrop-blur-sm">
-        <div class="logo flex p-0 m-0 justify-center content-center">
-            <a class="flex h-12 w-12" href=""><img src="common/logo.png" class="nav-logo-img"></a>
-            <a class="grid place-content-center pl-5" href="#"><h2 class="p-0 m-0 text-center text-white logo-title">十月模組伺服器</h2></a>
+        <div class="logo flex p-0 m-0 justify-center content-center select-none">
+            <a class="flex h-12 w-12" href=""><img nav-logo-img src="common/logo.png" class="no-drag_c"></a>
+            <a class="grid place-content-center pl-5" href="#"><h2 class="p-0 m-0 text-center text-white logo-title select-text">十月模組伺服器</h2></a>
         </div>
-        <ul class="flex list-none p-0 m-0 justify-center content-center">
+        <ul class="flex list-none p-0 m-0 justify-center content-center select-none">
             <li class="pages-li"><a class="page-selected">首頁</a></li>
             <li class="pages-li"><a href="">規則</a></li>
             <li class="pages-li"><a href="">公告</a></li>
@@ -28,17 +28,38 @@
     </nav>
     <div class="page-body">
         <div class="banner-image w-ful grid place-content-center">
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center items-center select-none">
                 <h1 class="page-title text-white" style="font-size: 3.4rem;">歡迎來到十月模組伺服器</h1>
-                <span class="text-center">
-                    <button class="flex justify-center text-white py-0.5 px-3 rounded-2xl" style="background-color: #DF0000; font-size: 1.6rem;">
-                        開始遊玩!
-                        <img class="h-9 w-9 pl-1" src="home/Atomic_Disassembler.png">
-                    </button>
-                </span>
+                <button onclick="diag.showModal();" class="flex justify-center text-white py-0.5 px-3 rounded-2xl" style="background-color: #DF0000; font-size: 1.6rem;">
+                    開始遊玩!
+                    <img class="h-9 w-10 pl-1 c_no-drag" src="home/Enchanted_Diamond_Pickaxe.webp">
+                </button>
             </div>
         </div>
     </div>
+    <dialog how-to-join-modal>
+        <div how-to-join-modal-inner class="relative grid gap-5 p-5 bg-2D2D2D_c text-center rounded-3xl text-2xl">
+            <a class="absolute right-2 top-2 grid place-content-center cursor-pointer" href="javascript:diag.close()">
+                <svg class="svg-white_c w-7 h-7" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M810.65984 170.65984q18.3296 0 30.49472 12.16512t12.16512 30.49472q0 18.00192-12.32896 30.33088l-268.67712 268.32896 268.67712 268.32896q12.32896 12.32896 12.32896 30.33088 0 18.3296-12.16512 30.49472t-30.49472 12.16512q-18.00192 0-30.33088-12.32896l-268.32896-268.67712-268.32896 268.67712q-12.32896 12.32896-30.33088 12.32896-18.3296 0-30.49472-12.16512t-12.16512-30.49472q0-18.00192 12.32896-30.33088l268.67712-268.32896-268.67712-268.32896q-12.32896-12.32896-12.32896-30.33088 0-18.3296 12.16512-30.49472t30.49472-12.16512q18.00192 0 30.33088 12.32896l268.32896 268.67712 268.32896-268.67712q12.32896-12.32896 30.33088-12.32896z"/>
+                </svg>
+            </a>
+            <h2 class="white text-4xl select-none">開始遊玩</h2>
+            <div class="bg-393939_c p-6 rounded-2xl select-none">
+                <span>伺服器位址：</span><br>
+                <span class="select-text">octoberserver.net:1000</span><a class="ml-1" href="javascript:navigator.clipboard.writeText('octoberserver.net:1000');">📋</a>
+            </div>
+            <div class="bg-393939_c p-6 rounded-2xl">
+                <p class="mb-2">加入Discord跟我們聊天!</p>
+                <a href="https://discord.gg/y8tjbRmxdY" target="_blank"><button class="py-1 px-3 rounded-2xl bg-DF0000_c select-none">加入Discord<img></button></a>
+            </div>
+        </div>
+    </dialog>
 </body>
 <script src="common/main.js"></script>
+<script>
+    let diag = document.querySelector("[how-to-join-modal]");
+    diag.addEventListener("click", () => diag.close());
+    document.querySelector("[how-to-join-modal-inner]").addEventListener('click', e => e.stopPropagation());
+</script>
 </html>

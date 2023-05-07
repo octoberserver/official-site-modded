@@ -4,3 +4,9 @@
     background-position: center;
     height: 80vh;
 }
+dialog {
+    background-color: transparent;
+    font-family: 'inter';
+    font-size: 18px;
+    color: white;
+}
