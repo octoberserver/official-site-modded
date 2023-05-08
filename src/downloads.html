@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="十月"/>
+    <meta name="description" content="我們是一個成立五年的伺服器，最特別的是進來玩不用擔心有白名單，我們每隔一陣子就會換季(沒有固定時間)，換季前會先舉辦投票確定大家都同意之後才會換季，換季後也會提供地圖檔讓大家下載喔！">
+    <meta name="keywords" content="生存, 模組, 模組伺服器, 領地, FTB, 模組包, Forge, Tinker, 1.16.5, 1.12.2, 1.7.10, 冒險, 科技">
+
+    <meta property="og:title" content="十月模組伺服器">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="我們是一個成立五年的伺服器，最特別的是進來玩不用擔心有白名單，我們每隔一陣子就會換季(沒有固定時間)，換季前會先舉辦投票確定大家都同意之後才會換季，換季後也會提供地圖檔讓大家下載喔！">
+    <meta property="og:image" content="common/images/icons/logo.png">
+    <meta property="og:site_name" content="十月模組伺服器">
+
+
+    <meta itemprop="name" content="十月模組伺服器　(Minecraft 模組伺服器)">
+    <meta itemprop="description" content="我們是一個成立五年的伺服器，最特別的是進來玩不用擔心有白名單，我們每隔一陣子就會換季">
+    <meta itemprop="image" content="common/images/icons/logo-blink-2.gif">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="downloads/downloads.css" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="common/images/icons/logo-blink-2.gif">
+    <title>十月模組伺服器　(Minecraft 模組伺服器 | 生存 | FTB | 模組包)</title>
+</head>
+<body>
+    <nav class="box-border w-full flex justify-between items-center py-1.5 px-5 fixed backdrop-blur-sm">
+        <div class="logo flex p-0 m-0 justify-center content-center select-none">
+            <a class="flex h-12 w-12" href=""><img nav-logo-img src="common/images/icons/logo.png" class="no-drag_c"></a>
+            <a class="grid place-content-center pl-5" href=""><h2 class="p-0 m-0 text-center text-white logo-title select-text">十月模組伺服器</h2></a>
+        </div>
+        <ul class="flex list-none p-0 m-0 justify-center content-center select-none">
+            <li class="pages-li"><span><a href="home.html">首頁</a></span></li>
+            <li class="pages-li"><span><a href="rules.html">規則</a></span></li>
+            <li class="pages-li"><span><a href="announcements.html">公告</a></span></li>
+            <li class="pages-li"><span class="page-selected"><a>下載</a></span></li>
+            <li class="pages-li"><span><a href="tutorials.html">教學</a></span></li>
+        </ul>
+    </nav>
+    <div class="page-body">
+        <div class="banner-image w-ful grid place-content-center">
+            <div class="flex flex-col justify-center items-center select-none">
+                <h1 class="page-title text-white inline text-center px-3" style="font-size: 3.8rem;">模組包下載</h1>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="common/main.js"></script>
+<script>
+    let diag = document.querySelector("[how-to-join-modal]");
+    diag.addEventListener("click", () => diag.close());
+    document.querySelector("[how-to-join-modal-inner]").addEventListener('click', e => e.stopPropagation());
+</script>
+</html>
