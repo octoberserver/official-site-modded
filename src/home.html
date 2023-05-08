@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="十月"/>
+    <meta name="description" content="我們是一個成立五年的伺服器，最特別的是進來玩不用擔心有白名單，我們每隔一陣子就會換季(沒有固定時間)，換季前會先舉辦投票確定大家都同意之後才會換季，換季後也會提供地圖檔讓大家下載喔！">
+    <meta name="keywords" content="生存, 模組, 模組伺服器, 領地, FTB, 模組包, Forge, Tinker, 1.16.5, 1.12.2, 1.7.10, 冒險, 科技">
+
+    <meta property="og:title" content="十月模組伺服器">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="我們是一個成立五年的伺服器，最特別的是進來玩不用擔心有白名單，我們每隔一陣子就會換季(沒有固定時間)，換季前會先舉辦投票確定大家都同意之後才會換季，換季後也會提供地圖檔讓大家下載喔！">
+    <meta property="og:image" content="common/logo.png">
+    <meta property="og:site_name" content="十月模組伺服器">
+
+
+    <meta itemprop="name" content="十月模組伺服器　(Minecraft 模組伺服器)">
+    <meta itemprop="description" content="我們是一個成立五年的伺服器，最特別的是進來玩不用擔心有白名單，我們每隔一陣子就會換季">
+    <meta itemprop="image" content="common/logo-blink-2.gif">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="../dist/output.css" rel="stylesheet">
     <link href="home/home.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="common/logo-blink-2.gif">
-    <title>十月模組伺服器</title>
+    <title>十月模組伺服器　(Minecraft 模組伺服器 | 生存 | FTB | 模組包)</title>
 </head>
 <body>
     <nav class="box-border w-full flex justify-between items-center py-1.5 px-5 fixed backdrop-blur-sm">
         <div class="logo flex p-0 m-0 justify-center content-center select-none">
             <a class="flex h-12 w-12" href=""><img nav-logo-img src="common/logo.png" class="no-drag_c"></a>
-            <a class="grid place-content-center pl-5" href="#"><h2 class="p-0 m-0 text-center text-white logo-title select-text">十月模組伺服器</h2></a>
+            <a class="grid place-content-center pl-5" href=""><h2 class="p-0 m-0 text-center text-white logo-title select-text">十月模組伺服器</h2></a>
         </div>
         <ul class="flex list-none p-0 m-0 justify-center content-center select-none">
             <li class="pages-li"><a class="page-selected">首頁</a></li>
@@ -29,29 +44,35 @@
     <div class="page-body">
         <div class="banner-image w-ful grid place-content-center">
             <div class="flex flex-col justify-center items-center select-none">
-                <h1 class="page-title text-white" style="font-size: 3.4rem;">歡迎來到十月模組伺服器</h1>
-                <button onclick="diag.showModal();" class="flex justify-center text-white py-0.5 px-3 rounded-2xl" style="background-color: #DF0000; font-size: 1.6rem;">
+                <h1 class="page-title text-white inline text-center px-3" style="font-size: 3.4rem;">歡迎來到十月模組伺服器</h1>
+                <button onclick="diag.showModal();" class="flex justify-center text-white py-0.5 px-3 rounded-2xl text-center" style="background-color: #DF0000; font-size: 1.6rem;">
                     開始遊玩!
                     <img class="h-9 w-10 pl-1 c_no-drag" src="home/Enchanted_Diamond_Pickaxe.webp">
                 </button>
             </div>
         </div>
     </div>
+    <h2 style="display: none"> 生存 | 模組 | 模組伺服器 | 領地 | FTB | 模組包 | Forge | 伺服器 | 1.16.5 | 1.12.2 | 1.7.10 | 冒險 | 科技 | FTB伺服器</h2>
     <dialog how-to-join-modal>
-        <div how-to-join-modal-inner class="relative grid gap-5 p-5 bg-2D2D2D_c text-center rounded-3xl text-2xl">
+        <div how-to-join-modal-inner class="relative grid gap-5 p-6 bg-2D2D2D_c text-center rounded-3xl" style="font-size: 1.75rem; line-height: 2.4rem;">
             <a class="absolute right-2 top-2 grid place-content-center cursor-pointer" href="javascript:diag.close()">
                 <svg class="svg-white_c w-7 h-7" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <path d="M810.65984 170.65984q18.3296 0 30.49472 12.16512t12.16512 30.49472q0 18.00192-12.32896 30.33088l-268.67712 268.32896 268.67712 268.32896q12.32896 12.32896 12.32896 30.33088 0 18.3296-12.16512 30.49472t-30.49472 12.16512q-18.00192 0-30.33088-12.32896l-268.32896-268.67712-268.32896 268.67712q-12.32896 12.32896-30.33088 12.32896-18.3296 0-30.49472-12.16512t-12.16512-30.49472q0-18.00192 12.32896-30.33088l268.67712-268.32896-268.67712-268.32896q-12.32896-12.32896-12.32896-30.33088 0-18.3296 12.16512-30.49472t30.49472-12.16512q18.00192 0 30.33088 12.32896l268.32896 268.67712 268.32896-268.67712q12.32896-12.32896 30.33088-12.32896z"/>
                 </svg>
             </a>
-            <h2 class="white text-4xl select-none">開始遊玩</h2>
-            <div class="bg-393939_c p-6 rounded-2xl select-none">
-                <span>伺服器位址：</span><br>
-                <span class="select-text">octoberserver.net:1000</span><a class="ml-1" href="javascript:navigator.clipboard.writeText('octoberserver.net:1000');">📋</a>
+            <h2 class="white select-none" style="font-size: 2.5rem;">開始遊玩</h2>
+            <div class="bg-393939_c py-3 px-5 rounded-2xl select-none">
+                <h3>伺服器位址：</h3>
+                <span class="select-text text-2xl">octoberserver.net:1000</span><a class="ml-1" href="javascript:navigator.clipboard.writeText('octoberserver.net:1000');">📋</a>
             </div>
-            <div class="bg-393939_c p-6 rounded-2xl">
-                <p class="mb-2">加入Discord跟我們聊天!</p>
-                <a href="https://discord.gg/y8tjbRmxdY" target="_blank"><button class="py-1 px-3 rounded-2xl bg-DF0000_c select-none">加入Discord<img></button></a>
+            <!-- <div class="bg-393939_c p-3 rounded-2xl">
+                <h3>想跟我們聊天嗎!</h3>
+                <a href="https://discord.gg/y8tjbRmxdY" target="_blank"><button class="py-1 px-3 rounded-xl bg-DF0000_c select-none text-2xl mt-1">加入Discord<img></button></a>
+            </div> -->
+            <div class="bg-393939_c py-3 px-5 rounded-2xl">
+                <p>我們是模組服<br><span class="text-2xl">需要使用特殊啟動器才能加入!</span></p>
+                <!-- <p class="mb-1 text-base text-gray-300">是老手嗎，<a class="underline-offset-1 text-indigo-400" href="/downloads#manual-modpacks">點擊我下載</a>手動安裝版模組包</p> -->
+                <a href="" target="_blank"><button class="mt-1 py-1 px-3 rounded-xl bg-DF0000_c select-none text-2xl">下載啟動器</button></a>
             </div>
         </div>
     </dialog>
