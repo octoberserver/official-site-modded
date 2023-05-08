@@ -1,5 +1,5 @@
 .banner-image {
-    background-image: url("minecraft1.png");
+    background-image: url("images/minecraft1.png");
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -9,4 +9,12 @@ dialog {
     font-family: 'inter';
     font-size: 18px;
     color: white;
+}
+.QNA-Q {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+.QNA-A {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity));
 }
