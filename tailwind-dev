@@ -1,0 +1,2 @@
+#!/bin/bash
+npx tailwindcss -i ./src/common/main.css -o ./dist/output.css --watch
