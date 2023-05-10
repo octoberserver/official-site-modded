@@ -9,8 +9,11 @@ else
     docker context use default
 fi
 
+docker stop modsrv-site
+docker rm modsrv-site
+docker image rm octmodsrv/official-site:latest
 docker build -t octmodsrv/official-site:latest .
-docker run -p80:80 -p443:443 octmodsrv/official-site:latest
+docker run -p80:80 -p443:443 --name modsrv-site octmodsrv/official-site:latest
 
 if [ "$remote" = "y" ]; then
     docker context use default
