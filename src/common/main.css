@@ -546,6 +546,18 @@ video {
   z-index: 40;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.row-span-1 {
+  grid-row: span 1 / span 1;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -671,6 +683,10 @@ video {
   height: 4rem;
 }
 
+.h-2\/3 {
+  height: 66.666667%;
+}
+
 .h-56 {
   height: 14rem;
 }
@@ -689,6 +705,10 @@ video {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .w-7 {
@@ -803,8 +823,16 @@ video {
   padding: 1.5rem;
 }
 
+.p-7 {
+  padding: 1.75rem;
+}
+
 .p-8 {
   padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-3 {
