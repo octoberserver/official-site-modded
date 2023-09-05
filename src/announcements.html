@@ -57,23 +57,36 @@
             </button>
         </a>
     </div> -->
-    <div class="flex flex-col justify-center items-center mb-20 p-20" x-data="{
+    <div class="flex flex-col justify-center items-center mb-20 p-20 gap-8" x-data="{
         announcements: null,
-        getAnnouncements() {
-        fetch('http://127.0.0.1:3000/announcements')
-            .then((response) => response.json())
-            .then((json) => {
-                this.announcements = json;
-                console.log(this.announcements)
-            });
-    }
-    }" x-init="getAnnouncements()">
-        <template x-for="[id, value] in Object.entries(announcements)">
-            <div>
-                <p x-text="value.Content"></p>
-                <template x-for="reaction in value.Reactions">
-                    <div x-text="reaction.EmojiName"></div>
-                </template>
+        // getAnnouncements() {
+        //     fetch('http://127.0.0.1:3000/announcements')
+        //         .then((response) => response.json())
+        //         .then((json) => {
+        //             this.announcements = json;
+        //             console.log(this.announcements)
+        //         });
+        // }
+        async getAnnouncements() {
+            return (await fetch('http://127.0.0.1:3000/announcements')).json()
+        }
+    }" x-init="announcements = await getAnnouncements()">
+        <template x-for="[id, value] in Object.entries(await getAnnouncements())">
+            <div class="p-8 bg-2D2D2D_c rounded-xl">
+                <pre class="text-2xl" x-text="value.Content"></pre>
+                <ul class="flex gap-2 mt-4" x-show="value.Reactions.length !== 0">
+                    <template x-for="reaction in value.Reactions">
+                        <li>
+                            <div class="text-xl flex px-1.5 py-1 bg-393939_c justify-center text-center items-center rounded-xl select-none no-usr-drag">
+                                <template x-if="reaction.EmojiID !== ''">
+                                    <img class="max-h-7 max-w-7" :src="`https://cdn.discordapp.com/emojis/${reaction.EmojiID}.png`"></img>
+                                </template>
+                                <span class="h-7 w-7" x-show="reaction.EmojiID === ''" style="font-size: 1.7rem; line-height: 1.7rem;" x-text="reaction.EmojiName"></span>
+                                <span class="px-1" x-text="reaction.ReactionCount"></span>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
             </div>
         </template>
     </div>
