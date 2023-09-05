@@ -57,36 +57,30 @@
             </button>
         </a>
     </div> -->
-    <div class="flex flex-col justify-center items-center mb-20 p-20 gap-8" x-data="{
-        announcements: null,
-        // getAnnouncements() {
-        //     fetch('http://127.0.0.1:3000/announcements')
-        //         .then((response) => response.json())
-        //         .then((json) => {
-        //             this.announcements = json;
-        //             console.log(this.announcements)
-        //         });
-        // }
+    <div class="grid grid-flow-row mb-20 p-20 gap-10" style="grid-template-columns: repeat( auto-fit, 32rem );" x-data="{
         async getAnnouncements() {
             return (await fetch('http://127.0.0.1:3000/announcements')).json()
         }
-    }" x-init="announcements = await getAnnouncements()">
+    }">
         <template x-for="[id, value] in Object.entries(await getAnnouncements())">
-            <div class="p-8 bg-2D2D2D_c rounded-xl">
-                <pre class="text-2xl" x-text="value.Content"></pre>
-                <ul class="flex gap-2 mt-4" x-show="value.Reactions.length !== 0">
-                    <template x-for="reaction in value.Reactions">
-                        <li>
-                            <div class="text-xl flex px-1.5 py-1 bg-393939_c justify-center text-center items-center rounded-xl select-none no-usr-drag">
-                                <template x-if="reaction.EmojiID !== ''">
-                                    <img class="max-h-7 max-w-7" :src="`https://cdn.discordapp.com/emojis/${reaction.EmojiID}.png`"></img>
-                                </template>
-                                <span class="h-7 w-7" x-show="reaction.EmojiID === ''" style="font-size: 1.7rem; line-height: 1.7rem;" x-text="reaction.EmojiName"></span>
-                                <span class="px-1" x-text="reaction.ReactionCount"></span>
-                            </div>
-                        </li>
-                    </template>
-                </ul>
+            <div class="flex flex-col justify-between w-fit p-6 bg-2D2D2D_c rounded-xl">
+                <pre class="text-2xl max-w-lg pre-wrap" x-text="value.Content"></pre>
+                <div class="flex flex-col w-fit mt-4 gap-2">
+                    <p class="font-light" x-text="new Date(value.TimePublished).toDateString()"></p>
+                    <ul class="flex gap-2" x-show="value.Reactions.length !== 0">
+                        <template x-for="reaction in value.Reactions">
+                            <li>
+                                <div class="text-xl flex px-1.5 py-1 bg-393939_c justify-center text-center items-center rounded-xl select-none no-usr-drag">
+                                    <template x-if="reaction.EmojiID !== ''">
+                                        <img class="max-h-7 max-w-7" :src="`https://cdn.discordapp.com/emojis/${reaction.EmojiID}.png`"></img>
+                                    </template>
+                                    <span class="pt-1 h-7 w-7" x-show="reaction.EmojiID === ''" style="font-size: 1.25rem; line-height: 1.25rem;" x-text="reaction.EmojiName"></span>
+                                    <span class="px-1" x-text="reaction.ReactionCount"></span>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
             </div>
         </template>
     </div>
