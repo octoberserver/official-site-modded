@@ -70,9 +70,9 @@
                     <ul class="flex gap-2" x-show="value.Reactions.length !== 0">
                         <template x-for="reaction in value.Reactions">
                             <li>
-                                <div class="text-xl flex px-1.5 py-1 bg-393939_c justify-center text-center items-center rounded-xl select-none no-usr-drag">
+                                <div class="text-xl flex p-1.5 bg-393939_c justify-center text-center items-center rounded-xl select-none no-usr-drag">
                                     <template x-if="reaction.EmojiID !== ''">
-                                        <img class="max-h-7 max-w-7" :src="`https://cdn.discordapp.com/emojis/${reaction.EmojiID}.png`"></img>
+                                        <img class="mx-1" style="max-height: 1.75rem; max-width: 1.75rem;" :src="`https://cdn.discordapp.com/emojis/${reaction.EmojiID}.png`"></img>
                                     </template>
                                     <span class="pt-1 h-7 w-7" x-show="reaction.EmojiID === ''" style="font-size: 1.25rem; line-height: 1.25rem;" x-text="reaction.EmojiName"></span>
                                     <span class="px-1" x-text="reaction.ReactionCount"></span>
