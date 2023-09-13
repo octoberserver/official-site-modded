@@ -16,7 +16,8 @@ docker-build:
 	docker rm modsrv-site; \
 	docker image rm octmodsrv/official-site:latest; \
 	docker build -t octmodsrv/official-site:latest .
-	docker run -p80:80 -p443:443 --name modsrv-site octmodsrv/official-site:latest
+	# docker run -p80:80 -p443:443 --name modsrv-site octmodsrv/official-site:latest
+	docker run -p8081:80 --name modsrv-site octmodsrv/official-site:latest
 
 tailwind-dev:
 	cd "${0%/*}"; \
